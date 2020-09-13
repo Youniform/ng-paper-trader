@@ -7,4 +7,21 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-stocks';
+
+  stocks = [
+    { symbol: 'TSLA', name:'Tesla, Inc.' },
+    { symbol: 'MSFT', name: 'Microsoft Corporation'},
+    { symbol: 'SPCE', name: 'Virgin Galactic'},
+    { symbol: 'CVS',  name: 'CVS Pharmacy'},
+  ];
+
+  selectedStock: string;
+
+  ngOnInit() {
+    this.selectedStock = '';
+  }
+
+  stockClicked(symbol) {
+    this.selectedStock = symbol;1qqqqqqqqqqqqqq
+  }
 }
